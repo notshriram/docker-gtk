@@ -1,7 +1,7 @@
 all: build
 
 src/main:
-	gcc `pkg-config --cflags gtk+-3.0` -o main main.c `pkg-config --libs gtk+-3.0`
+	g++ --std=c++20 main.cpp -o outline `pkg-config --cflags --libs gtk+-3.0` 
 
 .PHONY: build
 build:
