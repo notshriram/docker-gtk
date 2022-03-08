@@ -5,16 +5,16 @@ src/main:
 
 .PHONY: build
 build:
-	docker build -t jamrizzi/docker-gtk:latest -f deployment/Dockerfile .
+	docker build -t shriram/docker-cairo:latest -f deployment/Dockerfile .
 	@echo ::: built :::
 
 .PHONY: run
 run:
-	docker run -ti --rm -e DISPLAY=$(DISPLAY) -v /tmp/.X11-unix:/tmp/.X11-unix jamrizzi/docker-gtk:latest
+	docker run -ti --rm -e DISPLAY=$(DISPLAY) -v /tmp/.X11-unix:/tmp/.X11-unix shriram/docker-cairo:latest
 
 .PHONY: push
 push:
-	docker push jamrizzi/docker-gtk:latest
+	docker push shriram/docker-cairo:latest
 
 .PHONY: clean
 clean:
