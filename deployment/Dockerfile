@@ -5,7 +5,7 @@
 
 FROM alpine:3.5
 
-MAINTAINER Jam Risser (jamrizzi)
+#MAINTAINER Jam Risser (jamrizzi)
 
 WORKDIR /app/
 
@@ -17,7 +17,10 @@ RUN apk --no-cache add \
     apk add --no-cache --virtual build-deps \
         build-base \
         gtk+3.0-dev \
-        pkgconfig
+        pkgconfig \
+        cairo-dev \
+        cairo-tools \
+        cairo 
 
 RUN mkdir -p /etc/sudoers.d/ && \
     adduser -D default && \
