@@ -30,12 +30,12 @@ RUN mkdir -p /etc/sudoers.d/ && \
     chmod 0440 /etc/sudoers.d/default
 
 ADD ./* /app/.tmp/
+
 RUN cd /app/.tmp/ && make src/main && \
     apk del build-deps && \
-    mv /app/.tmp/main /app/main && \
-    mv /app/.tmp/cat.jpg /app/cat.jpg && \
+    mv /app/.tmp/outline /app/outline && \
     rm -rf /app/.tmp/
 
 USER default
 
-CMD /app/main
+CMD /app/outline
