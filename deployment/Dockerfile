@@ -3,7 +3,7 @@
 # Based on Alpine
 ############################################################
 
-FROM alpine:3.5
+FROM alpine:latest
 
 #MAINTAINER Jam Risser (jamrizzi)
 
